@@ -177,3 +177,25 @@ nav a:hover {
         padding: 14px;
     }
 }
+
+#Projects ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+}
+
+#Projects li {
+    background-color: #1a3c6e;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    #Projects ul {
+        flex-direction: column;
+    }
+}
