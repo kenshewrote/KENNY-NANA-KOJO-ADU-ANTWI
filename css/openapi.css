@@ -1,0 +1,18 @@
+body {
+    background-color: #f4f1ea;
+    color: #2b2b2b;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+
+nav a {
+    color: #1a3c6e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#Weather {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
