@@ -58,3 +58,24 @@ messageForm.addEventListener("submit", function(event) {
 
     messageForm.reset();
 });
+
+fetch("https://api.github.com/users/kenshewrote/repos")
+    .then(response => response.json())
+    .then(data => {
+        let repositories = data;
+        console.log(repositories);
+
+        let projectSection = document.querySelector("#Projects");
+        let projectList = projectSection.querySelector("ul");
+
+        for (let i = 0; i < repositories.length; i++) {
+            let project = document.createElement("li");
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error("An error occurred:", error);
+        let projectSection = document.querySelector("#Projects");
+        projectSection.innerHTML += "<p>Sorry, projects could not be loaded right now.</p>";
+    });
